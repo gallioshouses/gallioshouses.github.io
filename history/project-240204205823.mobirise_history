@@ -19,7 +19,7 @@
         "display5Font": "Roboto",
         "display5Size": "1.5",
         "display7Font": "Roboto",
-        "display7Size": "1",
+        "display7Size": 0.9,
         "display4Font": "Roboto",
         "display4Size": "1.20",
         "isRoundedButtons": false,
@@ -51,7 +51,7 @@
     ],
     "imageResize": true,
     "publishEditFolder": false,
-    "uniqCompNum": 111,
+    "uniqCompNum": 108,
     "versionPublish": "5.9.13",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -62,7 +62,9 @@
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "cookiesAlert": false,
-    "gdpr": false
+    "gdpr": false,
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -1853,104 +1855,13 @@
           },
           "_name": "footer1",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section class=\"footer1 hotelm4_footer1\" group=\"Footers\" global mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<select title=\"Columns Count\" name=\"columnsCount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"6\" step=\"1\" value=\"4\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcons\" checked condition=\"columnsCount >= 2\">\n\t\t<input type=\"checkbox\" title=\"Form\" name=\"showForm\" checked condition=\"columnsCount == 3\">\n\t\t<header condition=\"showForm || columnsCount >= 2\">Color</header>\n\t\t<input type=\"color\" title=\"Icons\" name=\"iconsColor\" value=\"#333333\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<input type=\"color\" title=\"Icons Hover\" name=\"iconsHoverColor\" value=\"#878787\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<input type=\"color\" title=\"Input BG\" name=\"inputBg\" value=\"#ffffff\" condition=\"showForm && columnsCount == 3\">\n\t\t<input type=\"color\" title=\"Input Text\" name=\"inputTextColor\" value=\"#000000\" condition=\"showForm && columnsCount == 3\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#333333\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-md-6 first-column\" mbr-class=\"{'col-lg-4': columnsCount == 3}\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">E-Mail Support</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\t24 HOURS A DAY\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\ttest@test.com</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-6 second-column\" mbr-class=\"{'col-lg-4': columnsCount == 3}\" mbr-if=\"columnsCount >= 2\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .icons-wrapper\">\n\t\t\t\t\tFind Us\n\t\t\t\t</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .icons-wrapper\">OUR SOCIAL AND PARTNERS</h3>\n\t\t\t\t<div class=\"icons-wrapper\" mbr-if=\"showIcons\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 1\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 2\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-booking socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 3\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-airbnb socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 4\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-behance socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 5\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-behance socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-7 col-lg-4 third-column\" mbr-if=\"columnsCount == 3\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .icons-wrapper\">\n\t\t\t\t\tOur Newsletter\n\t\t\t\t</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .icons-wrapper\">\n\t\t\t\t\tSIGN UP TO SEE WHAT'S NEW</h3>\n\t\t\t\t<div mbr-form class=\"form1 px-3\" mbr-if=\"showForm\">\n\t\t\t\t\t<!---Formbuilder Form--->\n\t\t\t\t\t<form action name=\"My Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling\n\t\t\t\t\t\t\t\tout the form!</div>\n\t\t\t\t\t\t\t<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"dragArea row\">\n\t\t\t\t\t\t\t<div class=\"form-group col\" data-for=\"email\">\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"email\" placeholder=\"E-mail\" data-form-field=\"E-mail\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-auto  input-group-btn\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\"><a type=\"submit\" class=\"btn btn-lg btn-info-outline\" data-app-placeholder=\"Εισάγετε κείμενο\">SUBSCRIBE</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t\t<!---Formbuilder Form--->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"footer1 hotelm4_footer1\" group=\"Footers\" global mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\t\t<select title=\"Columns Count\" name=\"columnsCount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"6\" step=\"1\" value=\"4\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcons\" checked condition=\"columnsCount >= 2\">\n\t\t<input type=\"checkbox\" title=\"Form\" name=\"showForm\" checked condition=\"columnsCount == 3\">\n\t\t<header condition=\"showForm || columnsCount >= 2\">Color</header>\n\t\t<input type=\"color\" title=\"Icons\" name=\"iconsColor\" value=\"#333333\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<input type=\"color\" title=\"Icons Hover\" name=\"iconsHoverColor\" value=\"#878787\" condition=\"showIcons &amp;&amp; columnsCount >= 2\">\n\t\t<input type=\"color\" title=\"Input BG\" name=\"inputBg\" value=\"#ffffff\" condition=\"showForm && columnsCount == 3\">\n\t\t<input type=\"color\" title=\"Input Text\" name=\"inputTextColor\" value=\"#000000\" condition=\"showForm && columnsCount == 3\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#333333\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-md-6 first-column\" mbr-class=\"{'col-lg-4': columnsCount == 3}\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">E-Mail Support</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\t24 HOURS A DAY\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\ttest@test.com</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-6 second-column\" mbr-class=\"{'col-lg-4': columnsCount == 3}\" mbr-if=\"columnsCount >= 2\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .icons-wrapper\">\n\t\t\t\t\tFind Us\n\t\t\t\t</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .icons-wrapper\">OUR SOCIAL AND PARTNERS</h3>\n\t\t\t\t<div class=\"icons-wrapper\" mbr-if=\"showIcons\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-facebook socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 1\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 2\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-booking socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 3\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-airbnb socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 4\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-behance socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li mbr-if=\"iconsCount > 5\">\n\t\t\t\t\t\t\t<a class=\"icon-transition\" href=\"#\">\n\t\t\t\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont socicon-behance socicon\"></span>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-7 col-lg-4 third-column\" mbr-if=\"columnsCount == 3\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-fonts-style\" mbr-class=\"{'pb-4': !showSubtitle,\n                                'pb-2': showSubtitle}\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .icons-wrapper\">\n\t\t\t\t\tOur Newsletter\n\t\t\t\t</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .icons-wrapper\">\n\t\t\t\t\tSIGN UP TO SEE WHAT'S NEW</h3>\n\t\t\t\t<div mbr-form class=\"form1 px-3\" mbr-if=\"showForm\">\n\t\t\t\t\t<!---Formbuilder Form--->\n\t\t\t\t\t<form action name=\"My Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling\n\t\t\t\t\t\t\t\tout the form!</div>\n\t\t\t\t\t\t\t<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"dragArea row\">\n\t\t\t\t\t\t\t<div class=\"form-group col\" data-for=\"email\">\n\t\t\t\t\t\t\t\t<input type=\"text\" name=\"email\" placeholder=\"E-mail\" data-form-field=\"E-mail\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"col-auto  input-group-btn\" mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\"><a type=\"submit\" class=\"btn btn-lg btn-info-outline\" data-app-placeholder=\"Εισάγετε κείμενο\">SUBSCRIBE</a></div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t\t<!---Formbuilder Form--->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "tYxyFSRGaL",
           "_anchor": "footer1-c",
           "_protectedParams": [],
           "_global": true,
           "_once": false,
           "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
         },
         {
           "alias": "eb-chats-widget",
@@ -1968,6 +1879,31 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "tYxAmLlzqg",
+          "_anchor": "footer2-d",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
@@ -3377,97 +3313,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
-        },
-        {
           "alias": "eb-chats-widget",
           "_isSecondary": true,
           "_styles": {},
@@ -3484,6 +3329,32 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_anchor": "footer2-z",
+          "_isUserblock": true,
+          "_cid": "tYDNxlWHfs",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
@@ -5862,97 +5733,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
-        },
-        {
           "alias": "eb-chats-widget",
           "_isSecondary": true,
           "_styles": {},
@@ -5969,6 +5749,32 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_anchor": "footer2-10",
+          "_isUserblock": true,
+          "_cid": "tYDNAWn0Pn",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
@@ -8374,97 +8180,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
-        },
-        {
           "alias": "eb-chats-widget",
           "_isSecondary": true,
           "_styles": {},
@@ -8481,6 +8196,31 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "rzMi9GHrgW",
+          "_anchor": "footer2-a",
+          "_sourceTheme": "hotelm4",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
@@ -9184,97 +8924,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
-        },
-        {
           "alias": "eb-chats-widget",
           "_isSecondary": true,
           "_styles": {},
@@ -9291,6 +8940,32 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_isUserblock": true,
+          "_cid": "tYDNAWn0Pn",
+          "_anchor": "footer2-1k",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
@@ -9980,97 +9655,6 @@
           "_params": {}
         },
         {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-fallback-image.disabled": {
-              "display": "none"
-            },
-            ".mbr-fallback-image": {
-              "display": "block",
-              "background-size": "cover",
-              "background-position": "center center",
-              "width": "100%",
-              "height": "100%",
-              "position": "absolute",
-              "top": "0",
-              "& when (@bg-type = \"video\")": {
-                "background-image": "url(@fallBackImage)"
-              }
-            },
-            ".copyright": {
-              "color": "#ffffff"
-            },
-            ".line": {
-              "width": "100%",
-              "height": "1px",
-              "opacity": "0.5",
-              "background": "currentColor",
-              "margin-bottom": "2rem"
-            },
-            ".center": {
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "center"
-            },
-            ".row": {
-              "@media (max-width: 767px)": {
-                ".copyright": {
-                  "text-align": "center",
-                  "padding-bottom": "2rem"
-                }
-              }
-            },
-            ".row-links": {
-              "width": "100%",
-              "justify-content": "center",
-              ".row-links-soc": {
-                "list-style": "none",
-                "display": "flex",
-                "justify-content": "flex-end",
-                "flex-wrap": "wrap",
-                "padding": "0",
-                "margin-bottom": "0",
-                "li": {
-                  "padding": "0 1rem 1rem 1rem",
-                  "p": {
-                    "margin": "0"
-                  }
-                },
-                "@media (max-width: 767px)": {
-                  "justify-content": "center"
-                }
-              }
-            },
-            ".row-links-soc, .row-links-soc-item .row-links-soc-item": {
-              "color": "#ffffff"
-            },
-            ".copyright, .line": {
-              "color": "#232323",
-              "text-align": "center"
-            },
-            ".row-links-soc": {
-              "color": "#232323"
-            }
-          },
-          "_name": "footer1",
-          "_sourceTheme": "tutorm5",
-          "_customHTML": "<section class=\"tutorm5 footer1\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n\t\t<input type=\"checkbox\" title=\"Links\" name=\"showLinks\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#efefef\" selected>\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/tutorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<div class=\"line\"></div>\n\t\t\t</div>\n\n\t\t\t<div class=\"col-12 col-md-6 center\">\n\t\t\t\t<p class=\"mbr-fonts-style copyright\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright, .line\" mbr-if=\"showCopy\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-12 col-md-6 center\" mbr-if=\"showLinks\">\n\t\t\t\t<div class=\"row-links\">\n\n\t\t\t\t\t<ul mbr-text mbr-theme-style=\"display-4\" class=\"mbr-fonts-style row-links-soc\" data-app-selector=\".row-links-soc\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tInstagram\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTikTok\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\tTwitter</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_cid": "u3lGVAVJDI",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footers",
-          "_params": {},
-          "_anchor": "footer1-32"
-        },
-        {
           "alias": "eb-chats-widget",
           "_isSecondary": true,
           "_styles": {},
@@ -10087,6 +9671,32 @@
           "_protectedParams": [],
           "_global": false,
           "_once": "chat",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"footer2 hotelm4_footer2\" group=\"Footers\" global once=\"footer\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background2.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#333333\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center mbr-white\">\n\t\t\t<div class=\"col-12\">\n\t\t\t\t<p class=\"mbr-text mb-0 mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t© Copyright 2024 Gallios Houses - All Rights Reserved\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_isUserblock": true,
+          "_cid": "tYDNAWn0Pn",
+          "_anchor": "footer2-1r",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
           "_params": {}
         }
       ]
