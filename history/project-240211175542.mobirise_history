@@ -51,7 +51,7 @@
     ],
     "imageResize": true,
     "publishEditFolder": false,
-    "uniqCompNum": 123,
+    "uniqCompNum": 121,
     "versionPublish": "5.9.13",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -5370,7 +5370,7 @@
           },
           "_name": "content3",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section class=\"mbr-section content3 hotelm4_content3\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"66\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Background\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"title\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">CHECK THE AVAILABILITY</h2>\n\t\t\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t\t\t<div class=\"line\"></div>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tStandard Title\n\t\t\t\t</h1>\n\t\t\t\t<h3 class=\"mbr-text align-center mbr-light mbr-fonts-style pt-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t</h3>\n\t\t\t\t<div class=\"mbr-section-btn align-center pt-4\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n\t\t\t\t\t<a class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content3 hotelm4_content3\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"66\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Background\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"title\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">CHECK THE AVAILABILITY</h2>\n\t\t\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t\t\t<div class=\"line\"></div>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tStandard Title\n\t\t\t\t</h1>\n\t\t\t\t<h3 class=\"mbr-text align-center mbr-light mbr-fonts-style pt-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t</h3>\n\t\t\t\t<div class=\"mbr-section-btn align-center pt-4\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n\t\t\t\t\t<a class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "u3OKRz4sDY",
           "_anchor": "content3-3b",
           "_protectedParams": [],
@@ -5381,8 +5381,8 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<div id=\"custom-html-3c\" class=\"container justify-content-center mb-3\"><!-- Type valid HTML here -->\n\t\t<div class=\"row input-group\">\n\t\t\t\t<div class=\"col-8 col-md-8 col-sm-12\">\n\t\t\t\t\t<input type=\"text\" name=\"datefilter\" value=\"Press To Select Dates\" class=\"form-control input-sm\" style=\"box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: none; border-radius: 0px\">\n                </div>\n                <div class=\"col-4 col-md-4 col-sm-12\">\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" style=\"box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\">Check Availability</button>\n                </div>\n\t\t\t\t</div>\n</div>",
-          "_customCSS": "",
+          "_customHTML": "<!-- Type valid HTML here -->\n<div class=\"input-group m-3\">\n    <input type=\"text\" name=\"datefilter\" value=\"Select Dates\">\n    <span class=\"input-group-addon glyphicon glyphicon-envelope\"></span>\n    <button class=\"button button-primary\">Check availability</button>\n</div>",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 40px 0;\n  color: #777;\n  text-align: center;\n  width: 100vw;\n}\ninput {\n  padding:10px;\n\tfont-family: FontAwesome, \"Open Sans\", Verdana, sans-serif;\n  font-style: normal;\n  font-weight: normal;\n  text-decoration: inherit;\n  border-radius: 0 !important;\n}\n\n.form-control {\n  border-radius: 0 !important;\n  font-size: 12x;\n}\n\n.clickable { cursor: pointer; }",
           "alias": "code-editor",
           "_tags": [
             "Extension"
@@ -5421,7 +5421,7 @@
           },
           "_name": "content3",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section class=\"mbr-section content3 hotelm4_content3\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"66\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Background\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"title\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">WHAT OUR CUSTOMERS SAY</h2>\n\t\t\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t\t\t<div class=\"line\"></div>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tStandard Title\n\t\t\t\t</h1>\n\t\t\t\t<h3 class=\"mbr-text align-center mbr-light mbr-fonts-style pt-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t</h3>\n\t\t\t\t<div class=\"mbr-section-btn align-center pt-4\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n\t\t\t\t\t<a class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section content3 hotelm4_content3\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"66\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Background\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"title\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">WHAT OUR CUSTOMERS SAY</h2>\n\t\t\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t\t\t<div class=\"line\"></div>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tStandard Title\n\t\t\t\t</h1>\n\t\t\t\t<h3 class=\"mbr-text align-center mbr-light mbr-fonts-style pt-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t</h3>\n\t\t\t\t<div class=\"mbr-section-btn align-center pt-4\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n\t\t\t\t\t<a class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
           "_cid": "u3kzJK7kbh",
           "_anchor": "content3-2y",
           "_protectedParams": [],
@@ -7660,7 +7660,13 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
+            "z-index": "1",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
             ".underline": {
               ".line": {
                 "width": "2rem",
@@ -7672,40 +7678,245 @@
             ".mbr-text": {
               "margin": "0"
             },
-            "@media (max-width: 767px)": {
-              ".title": {
-                "width": "100% !important"
+            ".check-in-input, .check-out-input, .guests .date-col span": {
+              "cursor": "pointer"
+            },
+            ".content-wrap": {
+              "display": "-webkit-flex",
+              "justify-content": "center",
+              "flex-wrap": "wrap",
+              "-webkit-justify-content": "center",
+              "-webkit-flex-wrap": "wrap",
+              "& when (@reverseContent)": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              ".first-item, .second-item": {
+                "padding": "1.5rem"
+              },
+              ".first-item": {
+                "background": "@firstBg",
+                ".item-text": {
+                  "text-align": "center"
+                },
+                ".item-btn .btn": {
+                  "margin-left": "4px !important"
+                }
+              },
+              ".second-item": {
+                "background": "@secondBg",
+                "display": "flex",
+                "-webkit-flex-direction": "column",
+                "flex-direction": "column",
+                ".check-text": {
+                  "display": "flex",
+                  "-webkit-justify-content": "space-between",
+                  "justify-content": "space-between",
+                  "padding": "1rem 0"
+                },
+                "& when (@showLine)": {
+                  ".check-out": {
+                    "border-top": "2px solid @lineColor !important"
+                  }
+                }
               }
             },
-            ".mbr-section-subtitle, .underline": {
-              "color": "#005777"
+            ".input-wrap": {
+              "background": "@formBg"
+            },
+            ".booking-datepicker": {
+              "display": "flex",
+              "justify-content": "center",
+              "align-items": "center"
+            },
+            ".booking-datepicker .mbr-form": {
+              ".input-wrap": {
+                "display": "flex",
+                "-webkit-flex-direction": "column",
+                "flex-direction": "column",
+                "-webkit-align-items": "center",
+                "align-items": "center",
+                "-webkit-justify-content": "center",
+                "justify-content": "center",
+                "padding-top": "1.5rem",
+                "padding-bottom": "1.5rem",
+                "overflow": "hidden",
+                "input": {
+                  "border": "none !important",
+                  "border-radius": "0",
+                  "position": "absolute",
+                  "background": "transparent",
+                  "z-index": "2",
+                  "left": "-90px",
+                  "top": "25%",
+                  "height": "50%",
+                  "width": "calc(100% ~'+' 90px)",
+                  "color": "transparent",
+                  "-webkit-user-select": "none",
+                  "-moz-user-select": "none",
+                  "-ms-user-select": "none",
+                  "-o-user-select": "none",
+                  "user-select": "none",
+                  "&.guests-input": {
+                    "z-index": "0"
+                  },
+                  "&::-webkit-input-placeholder": {
+                    "color": "transparent"
+                  },
+                  "&::-moz-placeholder": {
+                    "color": "transparent"
+                  },
+                  "&:-moz-placeholder": {
+                    "color": "transparent"
+                  },
+                  "&:-ms-input-placeholder": {
+                    "color": "transparent"
+                  },
+                  "&:focus": {
+                    "box-shadow": "none"
+                  }
+                },
+                ".label": {
+                  "z-index": "1",
+                  "color": "@dateColor"
+                },
+                ".date-row": {
+                  "display": "inline-flex",
+                  "color": "@dateColor",
+                  "z-index": "1",
+                  ".day, .guests-count": {
+                    "margin-bottom": "0",
+                    "margin-right": "1rem"
+                  },
+                  ".date-col": {
+                    "display": "flex",
+                    "-webkit-flex-direction": "column",
+                    "flex-direction": "column",
+                    "-webkit-justify-content": "center",
+                    "justify-content": "center",
+                    "-webkit-align-items": "center",
+                    "align-items": "center",
+                    "span:first-child": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              ".mbr-section-btn": {
+                "display": "flex",
+                ".input-group-btn": {
+                  "display": "flex",
+                  "width": "100%",
+                  ".btn": {
+                    "width": "100%",
+                    "margin": "0",
+                    "line-height": "18px",
+                    "font-weight": "300"
+                  }
+                }
+              }
+            },
+            ".email": {
+              "input": {
+                "width": "100%",
+                "border": "none !important",
+                "outline": "none",
+                "padding": "10px 15px",
+                "&::-webkit-input-placeholder": {
+                  "font-weight": "200"
+                }
+              }
+            },
+            ".datepicker": {
+              "background-color": "@calendarBg",
+              "color": "@calendarText",
+              ".active.day": {
+                "background-color": "@activeColor !important",
+                "color": "@activeTextColor !important"
+              },
+              "&:after": {
+                "border-top-color": "@calendarBg !important",
+                "border-bottom-color": "@calendarBg !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".mbr-section-btn": {
+                "justify-content": "center",
+                "padding": "0.5rem 0 0 0",
+                "margin": "0",
+                "order": "1",
+                ".input-group-btn": {
+                  "width": "100%",
+                  ".btn": {
+                    "width": "100%",
+                    "padding": "1rem"
+                  }
+                }
+              },
+              ".input-wrap": {
+                "margin-bottom": "0.5rem"
+              },
+              ".email": {
+                "input": {
+                  "border-radius": "0"
+                }
+              }
+            },
+            "@media (min-width: 768px)": {
+              ".booking-datepicker input:not(.guests-input):not([name='email'])": {
+                "& when (@showLines)": {
+                  "border-right": "1px solid @linesColor !important"
+                }
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".booking-datepicker": {
+                "padding-top": "2rem"
+              },
+              "& when (@reverseContent)": {
+                ".content-wrap": {
+                  "-webkit-flex-direction": "column-reverse",
+                  "flex-direction": "column-reverse"
+                },
+                ".booking-datepicker": {
+                  "padding-bottom": "2rem"
+                }
+              }
+            },
+            "@media (max-width: 575px)": {
+              ".datepicker": {
+                "left": "10% !important"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".main-title": {
+              "color": "#ffffff"
             }
           },
-          "_name": "content3",
+          "_name": "form5",
           "_sourceTheme": "hotelm4",
-          "_customHTML": "<section class=\"mbr-section content3 hotelm4_content3\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\t\t<input type=\"range\" inline title=\"Text Width\" name=\"textWidth\" min=\"20\" max=\"100\" step=\"1\" value=\"66\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Color</header>\n\t\t<input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Background\" name=\"bgColor\" value=\"#ffffff\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"container\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"title\" mbr-style=\"{'width': textWidth + '%'}\">\n\t\t\t\t<h2 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">CHECK THE AVAILABILITY</h2>\n\t\t\t\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t\t\t\t<div class=\"line\"></div>\n\t\t\t\t</div>\n\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tStandard Title\n\t\t\t\t</h1>\n\t\t\t\t<h3 class=\"mbr-text align-center mbr-light mbr-fonts-style pt-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t</h3>\n\t\t\t\t<div class=\"mbr-section-btn align-center pt-4\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" mbr-if=\"showButtons\">\n\t\t\t\t\t<a class=\"btn btn-lg btn-primary\" href=\"https://mobiri.se\">LEARN MORE</a>\n\t\t\t\t\t<a class=\"btn btn-lg btn-secondary-outline\" href=\"https://mobiri.se\">LIVE DEMO</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
-          "_anchor": "content3-3d",
+          "_customHTML": "<section class=\"form5 hotelm4_form5\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"bootstrap-datepicker, mbr-booking-datepicker\">\n\n    <mbr-parameters>\n        \n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n        <header>Show / Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" condition=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"First Item\" name=\"showFirstItem\">\n        <input type=\"checkbox\" title=\"1st Item Text\" name=\"showFirstText\" checked condition=\"showFirstItem\">\n        <input type=\"checkbox\" title=\"1st Item Button\" name=\"showFirstButton\" checked condition=\"showFirstItem\">\n        <input type=\"checkbox\" title=\"Second Item\" name=\"showSecondItem\" checked>\n        <input type=\"checkbox\" title=\"Line\" name=\"showLine\" checked condition=\"showSecondItem\">\n        <input type=\"checkbox\" title=\"Items Title\" name=\"showItemsTitle\" checked condition=\"showFirstItem || showSecondItem\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"(showFirstItem || showSecondItem) && showForm\">\n        <input type=\"checkbox\" title=\"Form\" name=\"showForm\" checked>\n        <header condition=\"(showUnderline && showSubtitle) || showFirstItem || showSecondItem || (showLine && showSecondItem)\">\n            Colors</header>\n        <input type=\"color\" title=\"Underline\" name=\"underlineColor\" value=\"#ffffff\" condition=\"showUnderline && showSubtitle\">\n        <input type=\"color\" title=\"1st Item BG\" name=\"firstBg\" value=\"#c19b76\" condition=\"showFirstItem\">\n        <input type=\"color\" title=\"2nd Item BG\" name=\"secondBg\" value=\"#005777\" condition=\"showSecondItem\">\n        <input type=\"color\" title=\"Line\" name=\"lineColor\" value=\"#ffffff\" condition=\"showLine && showSecondItem\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/a3-31-2000x1333.jpeg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#efefef\">\n            <input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=2jqUN6d6ZyM\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1-1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\n        <header condition=\"showForm\">Form Settings</header>\n        <input type=\"checkbox\" title=\"Show Labels\" name=\"showLabels\" checked condition=\"showForm\">\n        <input type=\"color\" title=\"Date Color\" name=\"dateColor\" value=\"#005777\" condition=\"showForm\">\n        <input type=\"text\" inline title=\"Min Date (mm/dd/yyyy)\" name=\"startDate\" value=\"01/01/2020\" condition=\"showForm\">\n        <input type=\"text\" inline title=\"Max Date (mm/dd/yyyy)\" name=\"endDate\" value=\"02/01/2025\" condition=\"showForm\">\n        <input type=\"color\" title=\"Datepicker BG Color\" name=\"calendarBg\" value=\"#fcfcfc\" condition=\"showForm\">\n        <input type=\"color\" title=\"Datepicker Text Color\" name=\"calendarText\" value=\"#709faf\" condition=\"showForm\">\n        <input type=\"color\" title=\"Active Day Color\" name=\"activeColor\" value=\"#ff9a8a\" condition=\"showForm\">\n        <input type=\"color\" title=\"Active Day Text Color\" name=\"activeTextColor\" value=\"#ffffff\" condition=\"showForm\">\n        <input type=\"checkbox\" title=\"Show Lines\" name=\"showLines\" checked condition=\"showForm\">\n        <input type=\"color\" title=\"Lines Color\" name=\"linesColor\" value=\"#709faf\" condition=\"showLines && showForm\">\n        <input type=\"color\" title=\"BG Color\" name=\"formBg\" value=\"#fcfcfc\" condition=\"showForm\">\n        \n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter mbr-white align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">\n            HOTEL LUXURY\n        </h3>\n        <div class=\"underline pb-3 align-center\" mbr-if=\"showUnderline && showSubtitle\">\n            <div class=\"line\"></div>\n        </div>\n        <h2 class=\"mbr-section-title main-title mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".main-title\">Check The Availability\n        </h2>\n        <div class=\"row justify-content-center\">\n            <div class=\"content-wrap col-12\" mbr-class=\"{'pt-5': showTitle || showSubtitle}\" mbr-if=\"showFirstItem || showSecondItem || showForm\">\n                <div class=\"first-item mbr-white\" mbr-class=\"{'col-lg-3': showSecondItem && showForm,\n                                'col-lg-4': !showSecondItem || !showForm}\" mbr-if=\"showFirstItem\">\n                    <h3 class=\"mbr-section-title first-item-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showItemsTitle\" data-app-selector=\".first-item-title\">\n                        Next Event\n                    </h3>\n                    <p class=\"mbr-text item-text mbr-fonts-style mbr-lighter pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showFirstText\" data-app-selector=\".item-text, .item-btn\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                    </p>\n                    <div mbr-buttons class=\"mbr-section-btn item-btn pt-3\" mbr-theme-style=\"display-4\" mbr-if=\"showFirstButton\" data-toolbar=\"-mbrBtnMove\">\n                        <a class=\"btn btn-md btn-white-outline\" href=\"https://mobiri.se\">READ MORE</a>\n                    </div>\n                </div>\n\n                <div class=\"second-item mbr-white\" mbr-class=\"{'col-lg-3': showFirstItem && showForm,\n                                'col-lg-4': !showFirstItem || !showForm}\" mbr-if=\"showSecondItem\">\n                    <h3 class=\"mbr-section-title second-item-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showItemsTitle\" data-app-selector=\".second-item-title\">\n                        Reservation Info\n                    </h3>\n                    <div class=\"info-column\" mbr-class=\"{'pt-3': showItemsTitle}\">\n                        <div mbr-text class=\"mbr-text check-in check-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".check-text\">\n                            <span>Check-In</span>\n                            <span>2:00 PM - 7:00 PM</span>\n                        </div>\n                        <div mbr-text class=\"mbr-text check-out check-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".check-text\">\n                            <span>Check-Out</span>\n                            <span>8:00 AM - 12:00 PM</span>\n                        </div>\n                    </div>\n                </div>\n\n                <div mbr-form class=\"booking-datepicker\" mbr-class=\"{'col-lg-6': showFirstItem && showSecondItem,\n                                'col-lg-8': !showFirstItem || !showSecondItem}\" data-start=\"{{startDate}}\" data-end=\"{{endDate}}\" mbr-if=\"showForm\">\n                    <form class=\"mbr-form\" action=\"gzavlanis@gmail.com\" method=\"get\" name=\"My Mobirise Form\" data-verified=\"gzavlanis@gmail.com\">\n                        \n                        <div>\n                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling\n                                out the form!</div>\n                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">\n                            </div>\n                        </div>\n                        \n                        <div class=\"container\">\n                            <div class=\"row\">\n                                <div class=\"col-12 col-md-3 input-wrap check-in\" data-for=\"check-in\">\n                                    <input type=\"text\" class=\"check-in-input form-control input-sm input-inverse\" name=\"check-in\" data-form-field=\"Check-In\" readonly>\n                                    <p class=\"label mbr-fonts-style align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showLabels\" data-app-selector=\".label\">\n                                        CHECK-IN\n                                    </p>\n                                    <div class=\"date-row\">\n                                        <span class=\"day display-2 mbr-bold\"></span>\n                                        <div class=\"date-col\">\n                                            <span class=\"month display-4\"></span>\n                                            <span class=\"mbr-iconfont mbri-arrow-down\"></span>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"col-12 col-md-3 input-wrap check-out\" data-for=\"check-out\">\n                                    <input type=\"text\" class=\"check-out-input\" name=\"check-out\" data-form-field=\"Check-Out\" readonly>\n                                    <p class=\"label mbr-fonts-style align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showLabels\" data-app-selector=\".label\">\n                                        CHECK-OUT\n                                    </p>\n                                    <div class=\"date-row\">\n                                        <span class=\"day display-2 mbr-bold\"></span>\n                                        <div class=\"date-col\">\n                                            <span class=\"month display-4\"></span>\n                                            <span class=\"mbr-iconfont mbri-arrow-down\"></span>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"col-12 col-md-3 input-wrap guests\" data-for=\"guests\">\n                                    <input type=\"text\" class=\"guests-input\" name=\"guests\" data-form-field=\"Guests\" readonly>\n                                    <p class=\"label mbr-fonts-style align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showLabels\" data-app-selector=\".label\">\n                                        GUESTS\n                                    </p>\n                                    <div class=\"date-row\">\n                                        <span class=\"guests-count display-2 mbr-bold\">1</span>\n                                        <div class=\"date-col\">\n                                            <span class=\"mbr-iconfont mbri-arrow-up\"></span>\n                                            <span class=\"mbr-iconfont mbri-arrow-down\"></span>\n                                        </div>\n                                    </div>\n                                </div>\n                                <div class=\"col-12 col-md-3 mbr-section-btn p-md-0\">\n                                    <span mbr-buttons mbr-theme-style=\"display-7\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\"><a href=\"https://mobiri.se/\" type=\"submit\" class=\"btn btn-form btn-info\" data-app-placeholder=\"Εισάγετε κείμενο\">CHECK THE AVAILABILITY\n                                        </a></span>\n                                </div>\n                                <div class=\"col-12 p-0 pt-md-3 email\" data-for=\"email\" hidden=\"hidden\">\n                                    <input type=\"text\" name=\"email\" data-form-field=\"Email\" placeholder=\"Your email\" required hidden=\"hidden\">\n                                </div>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "form5-28",
           "_isUserblock": true,
-          "_cid": "u3ZMeDgaFk",
+          "_cid": "u2GSg3QolQ",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
           "_params": {}
-        },
-        {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "<div id=\"custom-html-3c\" class=\"container justify-content-center mb-3\"><!-- Type valid HTML here -->\n\t\t<div class=\"row input-group\">\n\t\t\t\t<div class=\"col-8 col-md-8 col-sm-12\">\n\t\t\t\t\t<input type=\"text\" name=\"datefilter\" value=\"Press To Select Dates\" class=\"form-control input-sm\" style=\"box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border: none; border-radius: 0px\">\n                </div>\n                <div class=\"col-4 col-md-4 col-sm-12\">\n\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" style=\"box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\">Check Availability</button>\n                </div>\n\t\t\t\t</div>\n</div>",
-          "_customCSS": "",
-          "alias": "code-editor",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "pro.custom-html",
-          "_sourceTheme": "hotelm4",
-          "_anchor": "custom-html-3e",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
         },
         {
           "alias": false,
@@ -7746,17 +7957,15 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "",
-          "_customCSS": "",
+          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <h1 class=\"display-1\">Custom HTML Block</h1>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"#777\" width=\"200\" height=\"200\"><path d=\"M6.1 8.7L2.8 12l3.3 3.3-1.4 1.4L0 12l4.7-4.7 1.4 1.4zm13.2-1.4l-1.4 1.4 3.3 3.3-3.3 3.3 1.4 1.4L24 12l-4.7-4.7zM8.1 18.6l1.8.8 6-14-1.8-.8-6 14z\"></path></svg>\n    <p class=\"display-3\">Click to Open Code Editor</p>\n</div>",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
           "alias": "code-editor",
           "_tags": [
             "Extension"
           ],
           "_name": "pro.custom-html",
           "_sourceTheme": "hotelm4",
-          "_anchor": "custom-html-2x",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
+          "_anchor": "custom-html-2x"
         },
         {
           "alias": false,
