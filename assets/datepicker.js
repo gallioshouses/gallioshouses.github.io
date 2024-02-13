@@ -12,7 +12,7 @@ $(function () {
     });
 
     $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-        $(this).val('');
+        $(this).val('Press To Select Dates');
     });
 
 });
