@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "afroditiavailability.html",
+    "currentPage": "location.html",
     "theme": {
       "name": "hotelm4",
       "title": "HotelM4",
@@ -51,7 +51,7 @@
     ],
     "imageResize": true,
     "publishEditFolder": false,
-    "uniqCompNum": 125,
+    "uniqCompNum": 123,
     "versionPublish": "5.9.13",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -62,7 +62,9 @@
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "cookiesAlert": false,
-    "gdpr": false
+    "gdpr": false,
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -2466,9 +2468,26 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor",
             "overflow": "hidden",
             "box-sizing": "border-box",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".underline": {
+              ".line": {
+                "width": "2rem",
+                "height": "1px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .underline": {
+              "padding-left": "1rem",
+              "padding-right": "1rem"
+            },
             ".mbr-slider .carousel-control": {
               "background": "#1b1b1b"
             },
@@ -2480,47 +2499,8 @@
               "right": "0",
               "margin-right": "2.5rem"
             },
-            ".mbr-gallery-filter": {
-              "padding-top": "0px",
-              "padding-bottom": "0px"
-            },
-            ".container": {
-              "padding": "0"
-            },
             ".mbr-slider .modal-body .close": {
               "background": "#1b1b1b"
-            },
-            ".icon-focus": {
-              "display": "none"
-            },
-            ".btn-primary-outline": {
-              "border": "none !important",
-              "color": "gray !important",
-              "padding": "1rem 1rem",
-              "position": "relative",
-              "background": "transparent !important",
-              "font-weight": "400",
-              "&:hover": {
-                "background": "transparent !important",
-                "color": "@primaryColor !important"
-              }
-            },
-            "li.active .btn": {
-              "background": "transparent !important",
-              "color": "black !important"
-            },
-            "li": {
-              "position": "relative"
-            },
-            ".mbr-gallery-filter ul li:not(:last-child):after": {
-              "content": "''",
-              "position": "absolute",
-              "height": "24px",
-              "width": "1px",
-              "right": "0px",
-              "top": "26px",
-              "background": "lightgray",
-              "transform": "rotate(35deg)"
             },
             ".mbr-gallery-item > div::before": {
               "content": "''",
@@ -2529,74 +2509,102 @@
               "top": "0",
               "width": "100%",
               "height": "100%",
-              "background": "@overlayColor",
+              "background-color": "@overlayColor1",
               "opacity": "0",
               "-webkit-transition": "0.2s opacity ease-in-out",
               "transition": "0.2s opacity ease-in-out",
-              "& when (@gradOverlay)": {
-                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(180deg, @overlayColor1, @overlayColor2)"
               }
             },
+            ".icon-focus": {
+              "display": "none"
+            },
+            ".mbr-gallery-title": {
+              "transition": "all 0.5s ease",
+              "position": "absolute",
+              "text-align": "center",
+              "display": "none",
+              "width": "100%",
+              "bottom": "0",
+              "right": "0",
+              "padding": "1rem",
+              "color": "#ffffff",
+              "background": "transparent",
+              "-webkit-transition": "all 0.5s ease",
+              "-moz-transition": "all 0.5s ease",
+              "-o-transition": "all 0.5s ease",
+              "-ms-transition": "all 0.5s ease"
+            },
+            "ul": {
+              "font-size": "0"
+            },
+            ".mbr-gallery-filter ul li .btn": {
+              "border": "none",
+              "background-color": "transparent",
+              "color": "@tagsColor !important",
+              "padding": "0.5rem 1rem 0.6rem",
+              "border-radius": "0",
+              "margin": "0 !important",
+              "transition": "padding, border 0s, transform 0.2s"
+            },
+            ".mbr-gallery-filter ul li.active .btn": {
+              "padding": "0.5rem 1rem 0.5rem",
+              "border-radius": "0 !important",
+              "position": "relative"
+            },
+            ".mbr-gallery-filter ul li.active .btn:after": {
+              "content": "''",
+              "position": "absolute",
+              "bottom": "0",
+              "left": "0",
+              "width": "100%",
+              "height": "3px",
+              "background": "@tagsUnderline"
+            },
+            ".mbr-gallery-filter ul li": {
+              "padding": "0"
+            },
             ".mbr-gallery-item > div:hover": {
-              ".mbr-gallery-title::before": {
-                "background": "transparent !important"
+              ".mbr-gallery-title": {
+                "padding-bottom": "1.5rem",
+                "display": "block"
               },
               "&:before": {
-                "opacity": "@overlayOpacity !important"
+                "opacity": "@overlayOpacityItem !important"
               }
             },
             ".btn": {
-              "font-family": "@mainFont !important"
-            },
-            ".mbr-gallery-title": {
-              "font-size": "0.9em",
-              "position": "absolute",
-              "display": "flex",
-              "width": "100%",
-              "bottom": "0",
-              "height": "100%",
-              "padding": "2rem",
-              "color": "#fff",
-              "z-index": "2",
-              "justify-content": "center",
-              "align-items": "flex-end",
-              "transition": "all 0.3s",
-              "opacity": "0",
+              "background": "none",
+              "border-radius": "0 !important",
               "&:hover": {
-                "opacity": "1"
+                "background": "transparent !important",
+                "&:before": {
+                  "background": "transparent !important"
+                }
               },
               "&:before": {
-                "content": "' '",
-                "width": "100%",
-                "height": "100%",
-                "top": "0",
-                "left": "0",
-                "z-index": "-1",
-                "position": "absolute",
-                "background": "@overlayColor !important",
-                "opacity": "@overlayOpacity",
-                "-webkit-transition": "0.2s background ease-in-out",
-                "transition": "0.2s background ease-in-out",
-                "& when (@gradOverlay)": {
-                  "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
-                }
+                "background-color": "transparent !important"
+              },
+              "&:focus": {
+                "box-shadow": "none",
+                "background": "transparent !important"
               }
             },
-            "@media (max-width: 767px)": {
-              "li:not(:last-child):after": {
-                "top": "9px"
-              },
-              ".btn-primary-outline": {
-                "padding": "0rem 1rem",
-                "margin": "0 !important"
-              }
+            ".mbr-gallery-item > div > span": {
+              "color": "#005777"
+            },
+            ".mbr-section-subtitle, .underline": {
+              "color": "#005777"
             }
           },
-          "_name": "image02",
-          "_sourceTheme": "photom4",
-          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel image02 photom4_image02\" group=\"Images & Videos\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\" inline>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#45505b\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter mbr-gallery-show-text mbr-gallery-show-bullets></div>\n    </div>\n\n</section>",
-          "_cid": "u6mzM0fAke",
-          "_anchor": "image02-3g",
+          "_name": "gallery1",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"gallery1 hotelm4_gallery1 mbr-gallery mbr-slider-carousel\" group=\"Sliders & Galleries\" plugins=\"Masonry, Slider, BootstrapCarouselSwipe, Gallery, VimeoVideo\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Overlay Color 1\" name=\"overlayColor1\" value=\"#d8d7d7\">\n\t\t<input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#cccccc\" condition=\"gradientOverlay\">\n\t\t<input type=\"range\" title=\"Items Overlay Opacity\" name=\"overlayOpacityItem\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" inline>\n\t\t<input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#333333\" condition=\"gallery__filter\">\n\t\t<input type=\"color\" title=\"Tags Underline Color\" name=\"tagsUnderline\" value=\"#c19b76\" condition=\"gallery__filter\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background3.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<header>Gallery</header>\n\t\t<input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">BEACHES</h3>\n\n\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t<div class=\"line\"></div>\n\t</div>\n\n\t<h2 class=\"mbr-section-title mbr-fonts-style align-center pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Amazing beaches are waiting for you to discover</h2>\n\n\t<div class=\"col-left-gallery\" mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-text mbr-gallery-show-bullets></div>\n</section>",
+          "_cid": "u2SerYqpuU",
+          "_anchor": "gallery1-2e",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
           "_protectedParams": [
             "text_all",
             "gallery__filtersTextStyle",
@@ -2612,11 +2620,440 @@
             "gallery": [
               {
                 "tags": "Φανταστικό",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery00.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery00.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-4",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": true
+              },
+              {
+                "tags": "Φανταστικό",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              },
+              {
+                "tags": "Ανταποκρίσιμο",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              },
+              {
+                "tags": "Κινούμενο",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              }
+            ]
+          }
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "overflow": "hidden",
+            "box-sizing": "border-box",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".underline": {
+              ".line": {
+                "width": "2rem",
+                "height": "1px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .underline": {
+              "padding-left": "1rem",
+              "padding-right": "1rem"
+            },
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "@overlayColor1",
+              "opacity": "0",
+              "-webkit-transition": "0.2s opacity ease-in-out",
+              "transition": "0.2s opacity ease-in-out",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(180deg, @overlayColor1, @overlayColor2)"
+              }
+            },
+            ".icon-focus": {
+              "display": "none"
+            },
+            ".mbr-gallery-title": {
+              "transition": "all 0.5s ease",
+              "position": "absolute",
+              "text-align": "center",
+              "display": "none",
+              "width": "100%",
+              "bottom": "0",
+              "right": "0",
+              "padding": "1rem",
+              "color": "#ffffff",
+              "background": "transparent",
+              "-webkit-transition": "all 0.5s ease",
+              "-moz-transition": "all 0.5s ease",
+              "-o-transition": "all 0.5s ease",
+              "-ms-transition": "all 0.5s ease"
+            },
+            "ul": {
+              "font-size": "0"
+            },
+            ".mbr-gallery-filter ul li .btn": {
+              "border": "none",
+              "background-color": "transparent",
+              "color": "@tagsColor !important",
+              "padding": "0.5rem 1rem 0.6rem",
+              "border-radius": "0",
+              "margin": "0 !important",
+              "transition": "padding, border 0s, transform 0.2s"
+            },
+            ".mbr-gallery-filter ul li.active .btn": {
+              "padding": "0.5rem 1rem 0.5rem",
+              "border-radius": "0 !important",
+              "position": "relative"
+            },
+            ".mbr-gallery-filter ul li.active .btn:after": {
+              "content": "''",
+              "position": "absolute",
+              "bottom": "0",
+              "left": "0",
+              "width": "100%",
+              "height": "3px",
+              "background": "@tagsUnderline"
+            },
+            ".mbr-gallery-filter ul li": {
+              "padding": "0"
+            },
+            ".mbr-gallery-item > div:hover": {
+              ".mbr-gallery-title": {
+                "padding-bottom": "1.5rem",
+                "display": "block"
+              },
+              "&:before": {
+                "opacity": "@overlayOpacityItem !important"
+              }
+            },
+            ".btn": {
+              "background": "none",
+              "border-radius": "0 !important",
+              "&:hover": {
+                "background": "transparent !important",
+                "&:before": {
+                  "background": "transparent !important"
+                }
+              },
+              "&:before": {
+                "background-color": "transparent !important"
+              },
+              "&:focus": {
+                "box-shadow": "none",
+                "background": "transparent !important"
+              }
+            },
+            ".mbr-gallery-item > div > span": {
+              "color": "#005777"
+            },
+            ".mbr-section-subtitle, .underline": {
+              "color": "#005777"
+            }
+          },
+          "_name": "gallery1",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"gallery1 hotelm4_gallery1 mbr-gallery mbr-slider-carousel\" group=\"Sliders & Galleries\" plugins=\"Masonry, Slider, BootstrapCarouselSwipe, Gallery, VimeoVideo\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Overlay Color 1\" name=\"overlayColor1\" value=\"#d8d7d7\">\n\t\t<input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#d8d7d7\" condition=\"gradientOverlay\">\n\t\t<input type=\"range\" title=\"Items Overlay Opacity\" name=\"overlayOpacityItem\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" inline>\n\t\t<input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#333333\" condition=\"gallery__filter\">\n\t\t<input type=\"color\" title=\"Tags Underline Color\" name=\"tagsUnderline\" value=\"#c19b76\" condition=\"gallery__filter\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background3.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<header>Gallery</header>\n\t\t<input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">\n\t\tRESTAURANTS</h3>\n\n\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t<div class=\"line\"></div>\n\t</div>\n\n\t<h2 class=\"mbr-section-title mbr-fonts-style align-center pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Enjoy the unique tastes of the Cretan cuisine</h2>\n\n\t<div class=\"col-left-gallery\" mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-text mbr-gallery-show-bullets></div>\n</section>",
+          "_cid": "u2SfO1GwrW",
+          "_anchor": "gallery1-2h",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-7",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Κινούμενο",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery03.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery03.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-4",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": true
+              },
+              {
+                "tags": "Φανταστικό",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              },
+              {
+                "tags": "Φανταστικό",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              },
+              {
+                "tags": "Ανταποκρίσιμο",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              },
+              {
+                "tags": "Κινούμενο",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Πληκτρολογήστε τη λεζάντα εδώ",
+                "active": false
+              }
+            ]
+          }
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "overflow": "hidden",
+            "box-sizing": "border-box",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".underline": {
+              ".line": {
+                "width": "2rem",
+                "height": "1px",
+                "background": "@underlineColor",
+                "display": "inline-block"
+              }
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .underline": {
+              "padding-left": "1rem",
+              "padding-right": "1rem"
+            },
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background-color": "@overlayColor1",
+              "opacity": "0",
+              "-webkit-transition": "0.2s opacity ease-in-out",
+              "transition": "0.2s opacity ease-in-out",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(180deg, @overlayColor1, @overlayColor2)"
+              }
+            },
+            ".icon-focus": {
+              "display": "none"
+            },
+            ".mbr-gallery-title": {
+              "transition": "all 0.5s ease",
+              "position": "absolute",
+              "text-align": "center",
+              "display": "none",
+              "width": "100%",
+              "bottom": "0",
+              "right": "0",
+              "padding": "1rem",
+              "color": "#ffffff",
+              "background": "transparent",
+              "-webkit-transition": "all 0.5s ease",
+              "-moz-transition": "all 0.5s ease",
+              "-o-transition": "all 0.5s ease",
+              "-ms-transition": "all 0.5s ease"
+            },
+            "ul": {
+              "font-size": "0"
+            },
+            ".mbr-gallery-filter ul li .btn": {
+              "border": "none",
+              "background-color": "transparent",
+              "color": "@tagsColor !important",
+              "padding": "0.5rem 1rem 0.6rem",
+              "border-radius": "0",
+              "margin": "0 !important",
+              "transition": "padding, border 0s, transform 0.2s"
+            },
+            ".mbr-gallery-filter ul li.active .btn": {
+              "padding": "0.5rem 1rem 0.5rem",
+              "border-radius": "0 !important",
+              "position": "relative"
+            },
+            ".mbr-gallery-filter ul li.active .btn:after": {
+              "content": "''",
+              "position": "absolute",
+              "bottom": "0",
+              "left": "0",
+              "width": "100%",
+              "height": "3px",
+              "background": "@tagsUnderline"
+            },
+            ".mbr-gallery-filter ul li": {
+              "padding": "0"
+            },
+            ".mbr-gallery-item > div:hover": {
+              ".mbr-gallery-title": {
+                "padding-bottom": "1.5rem",
+                "display": "block"
+              },
+              "&:before": {
+                "opacity": "@overlayOpacityItem !important"
+              }
+            },
+            ".btn": {
+              "background": "none",
+              "border-radius": "0 !important",
+              "&:hover": {
+                "background": "transparent !important",
+                "&:before": {
+                  "background": "transparent !important"
+                }
+              },
+              "&:before": {
+                "background-color": "transparent !important"
+              },
+              "&:focus": {
+                "box-shadow": "none",
+                "background": "transparent !important"
+              }
+            },
+            ".mbr-gallery-item > div > span": {
+              "color": "#005777"
+            },
+            ".mbr-section-subtitle, .underline": {
+              "color": "#005777"
+            }
+          },
+          "_name": "gallery1",
+          "_sourceTheme": "hotelm4",
+          "_customHTML": "<section class=\"gallery1 hotelm4_gallery1 mbr-gallery mbr-slider-carousel\" group=\"Sliders & Galleries\" plugins=\"Masonry, Slider, BootstrapCarouselSwipe, Gallery, VimeoVideo\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n\t\t<input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\" inline>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Underline\" name=\"showUnderline\" checked condition=\"showSubtitle\">\n\t\t<input type=\"color\" title=\"Underline Color\" name=\"underlineColor\" value=\"#aa7124\" condition=\"showUnderline && showSubtitle\">\n\t\t<input type=\"color\" title=\"Overlay Color 1\" name=\"overlayColor1\" value=\"#d8d7d7\">\n\t\t<input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#d8d7d7\" condition=\"gradientOverlay\">\n\t\t<input type=\"range\" title=\"Items Overlay Opacity\" name=\"overlayOpacityItem\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" inline>\n\t\t<input type=\"color\" title=\"Tags Color\" name=\"tagsColor\" value=\"#333333\" condition=\"gallery__filter\">\n\t\t<input type=\"color\" title=\"Tags Underline Color\" name=\"tagsUnderline\" value=\"#c19b76\" condition=\"gallery__filter\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background3.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<header>Gallery</header>\n\t\t<input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<h3 class=\"mbr-section-subtitle mbr-fonts-style mbr-lighter align-center\" mbr-class=\"{'pb-3': !showUnderline}\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .underline\">\n\t\tCAFES - BARS</h3>\n\n\t<div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showSubtitle\">\n\t\t<div class=\"line\"></div>\n\t</div>\n\n\t<h2 class=\"mbr-section-title mbr-fonts-style align-center pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Enjoy your favorite beverage or drink with the best view</h2>\n\n\t<div class=\"col-left-gallery\" mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-text mbr-gallery-show-bullets></div>\n</section>",
+          "_cid": "u2Sg9Wc3hn",
+          "_anchor": "gallery1-2i",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-7",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Φανταστικό",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery00.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery00.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2625,11 +3062,11 @@
               },
               {
                 "tags": "Ανταποκρίσιμο",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery01.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery01.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery01.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery01.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2638,11 +3075,11 @@
               },
               {
                 "tags": "Δημιουργικό",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery02.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery02.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery02.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery02.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2651,11 +3088,11 @@
               },
               {
                 "tags": "Κινούμενο",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery03.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery03.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery03.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery03.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2664,11 +3101,11 @@
               },
               {
                 "tags": "Φανταστικό",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery04.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery04.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery04.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2677,11 +3114,11 @@
               },
               {
                 "tags": "Φανταστικό",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery05.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery05.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery05.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2690,11 +3127,11 @@
               },
               {
                 "tags": "Ανταποκρίσιμο",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery06.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery06.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery06.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -2703,11 +3140,11 @@
               },
               {
                 "tags": "Κινούμενο",
-                "videoPreview": "@ADDONS_PATH@/photom4/components/_images/gallery/preview.jpg",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
                 "playVideo": false,
                 "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
-                "image": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery07.jpg",
-                "thumb": "@ADDONS_PATH@/photom4/components/_images/gallery/gallery07.jpg",
+                "image": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
+                "thumb": "@THEME_PATH@/components/_images/gallery/gallery07.jpg",
                 "alt": "",
                 "title": "",
                 "customStyle1": "display-7",
@@ -8120,8 +8557,8 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<div class=\"mt-4 pt-4 shadow-lg\">\n<div class=\"row m-2\">\n<div class=\"box col-sm-12 col-md-12\">\n    <iframe class=\"responsive-iframe\" src=\"https://gzavlanis.github.io/reservations/#/afroditi\"></iframe>\n</div>\n</div>\n</div>",
-          "_customCSS": ".box {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  padding-top: 100%; /* 16:9 Aspect Ratio */\n}\n\n.responsive-iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  width: 100%;\n  height: 100%;\n  border: none;\n}",
+          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <iframe src=\"https://calendar.google.com/calendar/embed?height=700&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FAthens&amp;showTitle=0&amp;showPrint=0&amp;hl=en&amp;showTz=0&amp;showCalendars=0&amp;src=amV0NDJ2YnJjMmJpZTNqbGY5aHZxYnIxYWhpbGN1cXVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=MHFpdGltNTNrbHA3cmFiNmxjOWZ2czdyODFpbG44aGtAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;color=%23D50000\" style=\"border-width:0\" width=\"1400\" height=\"700\" frameborder=\"0\" scrolling=\"no\"></iframe>\n</div>",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 60px 0;\n  color: white;\n  text-align: center;\n}\n\niframe {\n  padding: 20px 20px;\n  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0         rgba(0, 0, 0, 0.19);\n}",
           "alias": "code-editor",
           "_tags": [
             "Extension"
