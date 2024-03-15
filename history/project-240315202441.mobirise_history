@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "chris.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "hotelm4",
       "title": "HotelM4",
@@ -62,7 +62,10 @@
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "cookiesAlert": false,
-    "gdpr": false
+    "gdpr": false,
+    "publishType": "local",
+    "mbrsite": "mbrsite://%7B%22id%22%3A362388%2C%22domain%22%3A%22dolw1fd9of.mobirisesite.com%22%7D",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {
@@ -7248,7 +7251,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<div>\n    <iframe src=\"https://b3b96956314240aa807caf097d77fa60.elf.site\"></iframe>\n</div>",
+          "_customHTML": "",
           "_customCSS": "",
           "alias": "code-editor",
           "_tags": [
